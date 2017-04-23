@@ -1,25 +1,91 @@
 # Change Log
 
-## 0.12.5 (March 20, 2017)
+## 0.14.0 (April 4, 2017)
 
-### Patches
+## Enhancements
 
-* Fix crashes on null activity
-  [#1148](https://github.com/airbnb/react-native-maps/pull/1148)
+* Restructure project #1164
+
+* Add showsIndoorLevelPicker -> setIndoorLevelPickerEnabled to MapView #1019
+[#1188](https://github.com/airbnb/react-native-maps/pull/1188)
+
+* iOS - Added onPress support for Polygons on Google Maps
+[#1024](https://github.com/airbnb/react-native-maps/pull/1024)
+
+*  Add customized user location annotation text
+[#1049](https://github.com/airbnb/react-native-maps/pull/1049)
+
+* iOS - Google Maps - Add `showsMyLocationButton` support
+[#1157](https://github.com/airbnb/react-native-maps/pull/1157)
 
 
-## 0.12.4 (January 12, 2017)
+## Patches
 
-### Patches
+* Fix getResources() null crash in mapview
+[#1188](https://github.com/airbnb/react-native-maps/pull/1188)
 
-* Revert
-  [#923](https://github.com/airbnb/react-native-maps/pull/923),
-  which accidentally introduced a breaking change.
+* Rename MapKit category to avoid conflicts with the one in RN
+[#1172](https://github.com/airbnb/react-native-maps/pull/1172)
 
-## 0.12.3 (January 6, 2017) _DEPRECATED_
+* Upgrade GMS dependencies to 10.2.0
+[#1169](https://github.com/airbnb/react-native-maps/pull/1169)
 
-**NOTE** 0.12.3 was accidentally released with the breaking change below.
-0.12.3 has been marked deprecated. Please use <=0.12.2 or ^0.12.4.
+* fix multiple-instance memory leak
+[#1130](https://github.com/airbnb/react-native-maps/pull/1130)
+
+* fix onSelected event for markers with custom view
+[#1079](https://github.com/airbnb/react-native-maps/pull/1079)
+
+* Crash in our App fix
+[#1096](https://github.com/airbnb/react-native-maps/pull/1096)
+
+* Use local RCTConvert+MapKit instead of the one in React Native
+[#1138](https://github.com/airbnb/react-native-maps/pull/1138)
+
+
+## 0.13.1 (March 21, 2017)
+
+
+## Enhancements
+
+* Add id identifier to marker-press event on Android
+[#1008](https://github.com/airbnb/react-native-maps/pull/1008)
+  (@stan229)
+
+* setNativeProps, marker opacity, nested components
+[#940](https://github.com/airbnb/react-native-maps/pull/940)
+  (@unboundfire)
+
+
+## Patches
+
+* Update the android buildToolsVersion to 25.0.0
+[#1152](https://github.com/airbnb/react-native-maps/pull/1152)
+  (@markusguenther)
+
+* use `provided` for RN gradle dependency
+[#1151](https://github.com/airbnb/react-native-maps/pull/1151)
+  (@gpeal)
+
+* fix null activity crash
+[#1150](https://github.com/airbnb/react-native-maps/pull/1150)
+  (@lelandrichardson)
+
+* Updated Google play services and gradle build plugin
+[#1023](https://github.com/airbnb/react-native-maps/pull/1023)
+  (@chris-at-translate)
+
+* Sets the map value for the AirMapUrlTile so that it can be updated properly
+[#992](https://github.com/airbnb/react-native-maps/pull/992)
+  (@jschloer)
+
+* onPress and onCalloutPress doesn't trigger on markers in iOS
+[#954](https://github.com/airbnb/react-native-maps/pull/954)
+  (@RajkumarPunchh)
+
+
+
+## 0.13.0 (January 6, 2017)
 
 ### Breaking Changes
 
@@ -27,6 +93,13 @@
   [#923](https://github.com/airbnb/react-native-maps/pull/923)
   (@ide)
 
+### Patches
+
+* Fix issue where callouts sometimes overlap or don't appear
+  [#936](https://github.com/airbnb/react-native-maps/pull/936)
+  (@RajkumarPunchh)
+
+## 0.12.3 (January 6, 2017)
 
 ### Patches
 
@@ -292,7 +365,7 @@ Failed to build DependencyGraph: @providesModule naming collision:
   Duplicate module name: String.prototype.es6
   Paths: /Users/<path to project>/node_modules/react-native-maps/example2/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/String.prototype.es6.js collides with /Users/<path to project>/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/String.prototype.es6.js
 
-This error is caused by a @providesModule declaration with the same name accross two different files.
+This error is caused by a @providesModule declaration with the same name across two different files.
 ```
 
 0.8.2 is identical to 0.8.1, except with the offending code removed from the NPM package.
